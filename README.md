@@ -22,26 +22,26 @@ In this README you will be guided through our project code and the several steps
 
 * Notebooks-Celina
   * Exploration
-    - concatenation-downsample: Concatenating different representations for downsampled data.
-    - concatenation-upsample: Concatenating different representations for upsampled data.
-    - determining-dimensions: Exploration on which dimensions might be best using plots.
-    - topic-distribution: Exploration of topics using article titles. 
+    * concatenation-downsample: Concatenating different representations for downsampled data.
+    * concatenation-upsample: Concatenating different representations for upsampled data.
+    * determining-dimensions: Exploration on which dimensions might be best using plots.
+    * topic-distribution: Exploration of topics using article titles. 
   * Gradient Boosting
-    - gradient-boosting-downsample: Gradient Boosting Machines on TF-IDF representation of downsampled data as well as experiments with concatenated data.
-    - gradient-boosting-upsample: Gradient Boosting Machines on TF-IDF representation of upsampled data as well as experiments with concatenated data.
+    * gradient-boosting-downsample: Gradient Boosting Machines on TF-IDF representation of downsampled data as well as experiments with concatenated data.
+    * gradient-boosting-upsample: Gradient Boosting Machines on TF-IDF representation of upsampled data as well as experiments with concatenated data.
   * Multi-Layer Perceptron
-    - MLP-downsample: MLP Classifier on TF-IDF representation of downsampled data as well as experiments with concatenated data.
-    - MLP-upsample: MLP Classifier on TF-IDF representation of upsampled data as well as experiments with concatenated data.
+    * MLP-downsample: MLP Classifier on TF-IDF representation of downsampled data as well as experiments with concatenated data.
+    * MLP-upsample: MLP Classifier on TF-IDF representation of upsampled data as well as experiments with concatenated data.
   * Naive Bayes
-    - naive-bayes-downsample: Naive Bayes classifier on TF-IDF representation of downsampled data as well as experiments with concat data.
-    - naive-bayes-upsample: Naive Bayes classifier on TF-IDF representation of upsampled data as well as experiments with concat data. 
+    * naive-bayes-downsample: Naive Bayes classifier on TF-IDF representation of downsampled data as well as experiments with concat data.
+    * naive-bayes-upsample: Naive Bayes classifier on TF-IDF representation of upsampled data as well as experiments with concat data. 
   * TF-IDF-Generation
-    - generate-tfidf-200dim-downsample: TF-IDF generation with 200 dimensions on downsampled data.
-    - generate-tfidf-200dim-upsample: TF-IDF generation with 200 dimensions on upsampled data.
-    - generate-tfidf-1000dim-downsample: TF-IDF generation with 1000 dimensions on downsampled data.
-    - generate-tfidf-1000dim-downsample: TF-IDF generation with 1000 dimensions on upsampled data.
+    * generate-tfidf-200dim-downsample: TF-IDF generation with 200 dimensions on downsampled data.
+    * generate-tfidf-200dim-upsample: TF-IDF generation with 200 dimensions on upsampled data.
+    * generate-tfidf-1000dim-downsample: TF-IDF generation with 1000 dimensions on downsampled data.
+    * generate-tfidf-1000dim-downsample: TF-IDF generation with 1000 dimensions on upsampled data.
   * Utils
-    - utils.py: Module with all necessary functions.
+    * utils.py: Module with all necessary functions.
 
 ## Guiding through the Process
 ### Step 1: Deserialize Files
@@ -54,8 +54,8 @@ Output Data:
 * Section_titles.csv: all pairwise combinations with the ID, title, Article and Relevance for each paragraph
 
 Additional Information: 
-Make sure that fold-0-base.train.cbor and fold-0-base.train.cbor-toplevel.qrels are placed in the same folder to deserialize the data. 
-Also note that the trec-car and cbor tools should be installed.
+* Make sure that fold-0-base.train.cbor and fold-0-base.train.cbor-toplevel.qrels are placed in the same folder to deserialize the data. 
+* Also note that the trec-car and cbor tools should be installed.
 
 ### Step 2: Data Cleansing
 Needed Notebooks:
@@ -69,7 +69,7 @@ Needed Notebooks:
 * Notebooks-Linda/Merging of corpusses with title file 
 
 Additional Information: 
-Make sure that CleansedText.csv and Section_titles.csv are in the same folder.
+* Make sure that CleansedText.csv and Section_titles.csv are in the same folder.
 
 ### Step 4: Create Training Files
 Needed Notebooks:
@@ -81,9 +81,9 @@ Output Data:
 * TrainingSet5000.csv
 
 Additional Information: 
-Make sure that MergedCorpuses2.csv is in the folder.
-Second possibility is to create training files with single files. 
-Make sure that MergedCorpuses.csv is in the folder. We used the first function with the single files.
+* Make sure that MergedCorpuses2.csv is in the folder.
+* Second possibility is to create training files with single files. 
+* Make sure that MergedCorpuses.csv is in the folder. We used the first function with the single files.
 
 ### Step 5: Creating Representations
 
@@ -140,9 +140,9 @@ Needed Notebook:
 * Notebooks-Celina/Naive Bayes/naives-bayes-upsample
 
 Additional Information:
-Make sure that Scikit Learn and Keras are installed.
-All learnt models for Unigram and Word embeddings representation. 
-Contains all evaluation metrics and functions to generate the text representations. 
+* Make sure that Scikit Learn and Keras are installed.
+* For all model in Notebooks-Celina, in order to load the training sets, the path is set to "../../Sets-Downsampled/TF-IDF/200/trainx_tfidf.csv" or "../../Sets-Upsampled/TF-IDF/200/trainx_tfidf.csv" with x again being a place holder for 1000, 2500, 5000
+* For all model in Notebooks-Celina, in order to load the training sets, the path is set to "../../Sets-Validation/TF-IDF/200/validatex_tfidf.csv" with x again being a place holder for 1000, 2500, 5000
 
 
 
