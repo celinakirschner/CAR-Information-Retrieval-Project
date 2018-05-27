@@ -1,6 +1,6 @@
-# CAR-Information-Retrieval-Project
+# CAR-Information-Retrieval-Project (Group 6)
 
-In this README you will be guided through our project code and the several steps necessary to generate the needed files and results. 
+In this README you will be guided through our project code and the several steps necessary to generate the needed files and results.  
 
 ## Content
 * Notebooks and their content
@@ -123,6 +123,7 @@ Output Data:
   * ../../Sets-Validation/TF-IDF/200/validate5000_tfidf.csv
 
 Additional Information: 
+* The sampling process contained in file Notebooks-Linda/Model Training must be executed before this part can be run.
 * The path for reading the downsampled data is set to: "../../Sets-Downsampled/Basic/Train_x_downsample.csv" where x is a place holder for 1000,2500 or 5000
 * The path for the upsampled data is set to: "../../Sets-Upsampled/Basic/Train_x_upsample.csv"
 * The path for reading the validation sets is set to "../../Sets-Validation/Basic/Validation_x_cleansed.csv"
