@@ -4,23 +4,22 @@ In this README you will be guided through our project code and the several steps
 
 ## Content
 * Notebooks and their content
-* Pipeline:
-  1. Deserialize Files
-  2. Data Cleansing
-  3. Merge Files
-  4. Create Training Files
-  5. Creating Representations
-  6. Model Training
+* Step 1: Deserialize Files
+* Step 2: Data Cleansing
+* Step 3: Merge Files
+* Step 4: Create Training Files
+* Step 5: Creating Representations
+* Step 6: Model Training
 
 ## Notebooks and their Content
-* Notebooks-Linda
+### Notebooks-Linda
   * Create Files: Deserialize the data from fold-0 and merge them with the section title and save them as individual csvs. 
   * Pre-Processing-corpus: Cleans the corpus from stopwords, remove punctuations, lower cases the text, stems them etc.
   * Merging of corpusses with title file: Merge the section title combinations with the cleansed text by using the paragraph IDs.
   * Create Trainingfiles: Creates training files with x articles from individual article.
   * Model Training: All learnt models for Unigram and Word embeddings representation. Contains all evaluation metrics and functions to  generate text representations.
 
-* Notebooks-Celina
+### Notebooks-Celina
   * Exploration
     * concatenation-downsample: Concatenating different representations for downsampled data.
     * concatenation-upsample: Concatenating different representations for upsampled data.
@@ -43,8 +42,7 @@ In this README you will be guided through our project code and the several steps
   * Utils
     * utils.py: Module with all necessary functions.
 
-## Guiding through the Process
-### Step 1: Deserialize Files
+## Step 1: Deserialize Files
 Needed Notebooks:
 * Notebooks-Linda/Create Files (Corpuses + Qrels)
 
@@ -57,21 +55,21 @@ Additional Information:
 * Make sure that fold-0-base.train.cbor and fold-0-base.train.cbor-toplevel.qrels are placed in the same folder to deserialize the data. 
 * Also note that the trec-car and cbor tools should be installed.
 
-### Step 2: Data Cleansing
+## Step 2: Data Cleansing
 Needed Notebooks:
 * Notebooks-Linda/Pre-Processing-corpus
 
 Output Data:
 * CleansedText.csv: Cleansed texts
 
-### Step 3: Merge Files
+## Step 3: Merge Files
 Needed Notebooks:
 * Notebooks-Linda/Merging of corpusses with title file 
 
 Additional Information: 
 * Make sure that CleansedText.csv and Section_titles.csv are in the same folder.
 
-### Step 4: Create Training Files
+## Step 4: Create Training Files
 Needed Notebooks:
 * Notebooks-Linda/Create Trainingfiles
 
@@ -85,17 +83,17 @@ Additional Information:
 * Second possibility is to create training files with single files. 
 * Make sure that MergedCorpuses.csv is in the folder. We used the first function with the single files.
 
-### Step 5: Creating Representations
+## Step 5: Creating Representations
 
-#### Step 5.1: Creating Unigrams
+### Step 5.1: Creating Unigrams
 Needed Notebook:
 * Notebooks-Linda/Model Training
 
-#### Step 5.2: Creating Unigrams
+### Step 5.2: Creating Unigrams
 Needed Notebook:
 * Notebooks-Linda/Model Training
 
-#### Step 5.3: Creating TF-IDF
+### Step 5.3: Creating TF-IDF
 Needed Notebooks:
 * Notebooks-Celina/TF-IDF Generation/generate-tfidf-200dim-downsample
 * Notebooks-Celina/TF-IDF Generation/generate-tfidf-200dim-upsample
@@ -129,7 +127,7 @@ Additional Information:
 * The path for the upsampled data is set to: "../../Sets-Upsampled/Basic/Train_x_upsample.csv"
 * The path for reading the validation sets is set to "../../Sets-Validation/Basic/Validation_x_cleansed.csv"
 
-### Step 6: Model Training
+## Step 6: Model Training
 Needed Notebook:
 * Notebooks-Linda/Model Training
 * Notebooks-Celina/Gradient Boosting/gradient-boosting-upsample
