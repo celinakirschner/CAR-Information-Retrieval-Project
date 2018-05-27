@@ -126,6 +126,12 @@ Additional Information:
 * The path for reading the downsampled data is set to: "../../Sets-Downsampled/Basic/Train_x_downsample.csv" where x is a place holder for 1000,2500 or 5000
 * The path for the upsampled data is set to: "../../Sets-Upsampled/Basic/Train_x_upsample.csv"
 * The path for reading the validation sets is set to "../../Sets-Validation/Basic/Validation_x_cleansed.csv"
+* It is suggested that the following folders be created in order to store the output properly:
+  * ../../Sets-Downsampled/TF-IDF/200/
+  * ../../Sets-Downsampled/TF-IDF/1000/
+  * ../../Sets-Upsampled/TF-IDF/200/
+  * ../../Sets-Upsampled/TF-IDF/1000/
+  * ../../Sets-Validation/TF-IDF/200/
 
 ## Step 6: Model Training
 Needed Notebook:
@@ -140,7 +146,7 @@ Needed Notebook:
 Additional Information:
 * Make sure that Scikit Learn and Keras are installed.
 * For all model in Notebooks-Celina, in order to load the training sets, the path is set to "../../Sets-Downsampled/TF-IDF/200/trainx_tfidf.csv" or "../../Sets-Upsampled/TF-IDF/200/trainx_tfidf.csv" with x again being a place holder for 1000, 2500, 5000
-* For all model in Notebooks-Celina, in order to load the training sets, the path is set to "../../Sets-Validation/TF-IDF/200/validatex_tfidf.csv" with x again being a place holder for 1000, 2500, 5000
+* For all model in Notebooks-Celina, in order to load the validation, the path is set to "../../Sets-Validation/TF-IDF/200/validatex_tfidf.csv" with x again being a place holder for 1000, 2500, 5000
 
 
 
