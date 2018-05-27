@@ -85,9 +85,59 @@ Make sure that MergedCorpuses2.csv is in the folder.
 Second possibility is to create training files with single files. 
 Make sure that MergedCorpuses.csv is in the folder. We used the first function with the single files.
 
-### Step 5: Model Training
+### Step 5: Creating Representations
+
+#### Step 5.1: Creating Unigrams
 Needed Notebook:
 * Notebooks-Linda/Model Training
+
+#### Step 5.2: Creating Unigrams
+Needed Notebook:
+* Notebooks-Linda/Model Training
+
+#### Step 5.3: Creating TF-IDF
+Needed Notebooks:
+* Notebooks-Celina/TF-IDF Generation/generate-tfidf-200dim-downsample
+* Notebooks-Celina/TF-IDF Generation/generate-tfidf-200dim-upsample
+* Notebooks-Celina/TF-IDF Generation/generate-tfidf-1000dim-downsample
+* Notebooks-Celina/TF-IDF Generation/generate-tfidf-1000dim-upsample
+
+Output Data:
+* Downsampled Version:
+  * ../../Sets-Downsampled/TF-IDF/200/train1000_tfidf.csv
+  * ../../Sets-Downsampled/TF-IDF/200/train2500_tfidf.csv
+  * ../../Sets-Downsampled/TF-IDF/200/train5000_tfidf.csv
+  * ../../Sets-Downsampled/TF-IDF/1000/train1000_tfidf.csv
+  * ../../Sets-Downsampled/TF-IDF/1000/train2500_tfidf.csv
+  * ../../Sets-Downsampled/TF-IDF/1000/train5000_tfidf.csv
+
+* Upsampled Version: 
+  * ../../Sets-Upsampled/TF-IDF/200/train1000_tfidf.csv
+  * ../../Sets-Upsampled/TF-IDF/200/train2500_tfidf.csv
+  * ../../Sets-Upsampled/TF-IDF/200/train5000_tfidf.csv
+  * ../../Sets-Upsampled/TF-IDF/1000/train1000_tfidf.csv
+  * ../../Sets-Upsampled/TF-IDF/1000/train2500_tfidf.csv
+  * ../../Sets-Upsampled/TF-IDF/1000/train5000_tfidf.csv
+  
+* Validation Sets:
+  * ../../Sets-Validation/TF-IDF/200/validate1000_tfidf.csv
+  * ../../Sets-Validation/TF-IDF/200/validate2500_tfidf.csv
+  * ../../Sets-Validation/TF-IDF/200/validate5000_tfidf.csv
+
+Additional Information: 
+* The path for reading the downsampled data is set to: "../../Sets-Downsampled/Basic/Train_x_downsample.csv" where x is a place holder for 1000,2500 or 5000
+* The path for the upsampled data is set to: "../../Sets-Upsampled/Basic/Train_x_upsample.csv"
+* The path for reading the validation sets is set to "../../Sets-Validation/Basic/Validation_x_cleansed.csv"
+
+### Step 6: Model Training
+Needed Notebook:
+* Notebooks-Linda/Model Training
+* Notebooks-Celina/Gradient Boosting/gradient-boosting-upsample
+* Notebooks-Celina/Gradient Boosting/gradient-boosting-downsample
+* Notebooks-Celina/Multi-Layer Perceptron/MLP-upsample
+* Notebooks-Celina/Multi-Layer Perceptron/MLP-downsample
+* Notebooks-Celina/Naive Bayes/naive-bayes-upsample
+* Notebooks-Celina/Naive Bayes/naives-bayes-upsample
 
 Additional Information:
 Make sure that Scikit Learn and Keras are installed.
